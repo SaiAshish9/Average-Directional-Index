@@ -9,23 +9,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DataComponent } from './data/data.component';
 import { CsvComponent } from './csv/csv.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    DataComponent,
-    CsvComponent
-  ],
+  declarations: [AppComponent, NavbarComponent, DataComponent, CsvComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

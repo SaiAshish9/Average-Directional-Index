@@ -1,6 +1,21 @@
-<div style="margin-top:20vh;"></div>
-<div style="display:flex;flex-direction:column;justify-content:space-around; align-items:center;width:80%">
+<div style="margin-top:2vh;"></div>
+<div style="display:flex;flex-direction:column;justify-content:space-around; height:30vh; align-items:center;width:80%">
   <p class="mat-h2">Upload the input csv file here: </p>
-  <button style="width:40%;" mat-raised-button>Upload</button>
+  <label for="csv" style="width:40%;">
+    <button style="width:100%" mat-raised-button (click)="start()" *ngIf="!selected">Upload</button>
+  </label>
+  <div *ngIf="selected && !loading" style="display:flex;justify-content:space-around;width:70%;">
+    <a style="width:30%;" [href]="url" target="_blank"
+      rel="noopener noreferrer">
+      <button mat-raised-button color="primary">
+        Show Result
+      </button>
+    </a>
+    <button style="width:30%;" mat-stroked-button color="primary" (click)="selected=!selected">
+      Retry
+    </button>
+  </div>
+  <mat-spinner *ngIf="loading" diameter="40"></mat-spinner>
 </div>
 <div style="margin-bottom:15vh;"></div>
+<input type="file" max-size="10000000" accept=".csv,.xlsx" style="display:none;" id="csv" (change)="fetchCsv($event)" />
