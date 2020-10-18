@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  URL: 'https://api.cloudinary.com/v1_1/saiashish/raw/upload',
+  UPLOAD_PRESET: 'react-tracks',
+  CLOUD_NAME: 'saiashish',
+  API_KEY: '618467664765613',
+  API_SECRET: 'wCWl49chqxO_gChLJFSHtYFvX24',
 };
 
 /*

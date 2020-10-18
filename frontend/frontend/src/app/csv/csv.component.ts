@@ -25,8 +25,12 @@ export class CsvComponent implements OnInit {
     const file = e.target.files[0];
     if (file && file.size < 10000000) {
       this.csv.fetchCsv(file).subscribe((res) => {
-        this.url=res['url'];
-        this.loading = false;
+        console.log(res['secure_url']);
+        this.csv.fetchResult(res['secure_url']).subscribe((result) => {
+          console.log(result['result']);
+          this.url = result['result'];
+          this.loading = false;
+        });
       });
     }
   }
