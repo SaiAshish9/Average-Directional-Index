@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  URL: 'https://api.cloudinary.com/v1_1/saiashish/raw/upload',
-  UPLOAD_PRESET: 'react-tracks',
+  URL: '',
+  UPLOAD_PRESET: '',
   CLOUD_NAME: 'saiashish',
-  API_KEY: '618467664765613',
-  API_SECRET: 'wCWl49chqxO_gChLJFSHtYFvX24',
+  API_KEY: '',
+  API_SECRET: '',
 };
 
 /*
